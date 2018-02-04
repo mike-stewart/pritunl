@@ -1,7 +1,7 @@
 
-package "pritunl"
+package 'pritunl'
 
-service "pritunl" do
-  provider Chef::Provider::Service::Upstart
+service 'pritunl' do
   supports :status => true, :restart => true
+  action [:start, :enable]
 end
